@@ -4,11 +4,17 @@
     "title": "FaithWorkz",
     "shortDescription": "Household management PWA for families and housemates",
     "description": "A full-featured progressive web app for household management. Covers tasks, to-dos, shopping lists, meal planning, recipe books, plant care, budgeting, bills, vehicles, medications, emergency contacts, calendar, journaling, and AI-powered auto-fill — all synced in real time via Supabase and backed by push notifications.",
-    "technologies": ["React", "Vite", "TypeScript", "Supabase", "Ant Design", "PWA"],
+    "technologies": [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Supabase",
+      "Ant Design",
+      "PWA"
+    ],
     "category": "productivity",
     "status": "live",
     "subdomain": "faithworkz",
-    "subdomainUrl": "https://faithworkz.qickrapps.au",
     "featured": true,
     "order": 1,
     "emoji": "🏠",
@@ -21,20 +27,26 @@
     ],
     "screenshots": [],
     "repositoryUrl": null,
-    "liveAppUrl": null,
     "version": "1.0.0",
-    "lastUpdated": "2026-03-30"
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": "https://faithworkz.qickrapps.au",
+    "liveAppUrl": null,
+    "_syncedAt": "2026-03-30T13:05:26.136Z"
   },
   {
     "id": "qickr-ndis",
     "title": "YEMS NDIS",
     "shortDescription": "Modern NDIS management platform — save $2,536/year",
     "description": "A comprehensive NDIS management platform built for Australian disability service providers. Replaces legacy systems like ShiftCare at 51% of the cost with unlimited users, 60+ KPIs, full customisation, 7-year audit compliance, real-time analytics, staff/client management, document storage, and an NDIS cost calculator using 2025 support rates.",
-    "technologies": ["Astro", "Tailwind CSS", "TypeScript", "Vercel"],
+    "technologies": [
+      "Astro",
+      "Tailwind CSS",
+      "TypeScript",
+      "Vercel"
+    ],
     "category": "saas",
     "status": "live",
     "subdomain": "qickr-ndis",
-    "subdomainUrl": "https://qickr-ndis.qickrapps.au",
     "featured": true,
     "order": 2,
     "emoji": "♿",
@@ -49,7 +61,9 @@
     "repositoryUrl": null,
     "liveAppUrl": "https://app.quickrndis.com.au",
     "version": "1.0.0",
-    "lastUpdated": "2026-03-30"
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": "https://qickr-ndis.qickrapps.au",
+    "_syncedAt": "2026-03-30T13:05:26.136Z"
   },
   {
     "id": "jjs-gnome",
@@ -60,7 +74,6 @@
     "category": "utility",
     "status": "coming-soon",
     "subdomain": "jjs-gnome",
-    "subdomainUrl": null,
     "featured": false,
     "order": 3,
     "emoji": "🔮",
@@ -68,9 +81,11 @@
     "highlights": [],
     "screenshots": [],
     "repositoryUrl": null,
-    "liveAppUrl": null,
     "version": "0.0.0",
-    "lastUpdated": "2026-03-30"
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": null,
+    "liveAppUrl": null,
+    "_syncedAt": "2026-03-30T13:05:26.137Z"
   },
   {
     "id": "qickr-loyalty",
@@ -81,7 +96,6 @@
     "category": "saas",
     "status": "coming-soon",
     "subdomain": "qickr-loyalty",
-    "subdomainUrl": null,
     "featured": false,
     "order": 4,
     "emoji": "🎯",
@@ -89,9 +103,11 @@
     "highlights": [],
     "screenshots": [],
     "repositoryUrl": null,
-    "liveAppUrl": null,
     "version": "0.0.0",
-    "lastUpdated": "2026-03-30"
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": null,
+    "liveAppUrl": null,
+    "_syncedAt": "2026-03-30T13:05:26.137Z"
   },
   {
     "id": "qickr-pos-learning",
@@ -102,7 +118,6 @@
     "category": "education",
     "status": "coming-soon",
     "subdomain": "qickr-pos-learning",
-    "subdomainUrl": null,
     "featured": false,
     "order": 5,
     "emoji": "🖥️",
@@ -110,9 +125,10 @@
     "highlights": [],
     "screenshots": [],
     "repositoryUrl": null,
-    "liveAppUrl": null,
     "version": "0.0.0",
-    "lastUpdated": "2026-03-30"
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": null,
+    "liveAppUrl": null,
+    "_syncedAt": "2026-03-30T13:05:26.137Z"
   }
 ]
-
