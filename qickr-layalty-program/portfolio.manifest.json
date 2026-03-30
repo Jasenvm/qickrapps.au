@@ -1,0 +1,21 @@
+{
+  "$schema": "../scripts/manifest.schema.json",
+  "id": "qickr-loyalty",
+  "title": "Qickr Loyalty",
+  "shortDescription": "Coming soon — points-based loyalty program platform",
+  "description": "Details coming soon.",
+  "technologies": [],
+  "category": "saas",
+  "status": "coming-soon",
+  "subdomain": "qickr-loyalty",
+  "featured": false,
+  "order": 4,
+  "emoji": "🎯",
+  "accentColor": "#f59e0b",
+  "highlights": [],
+  "screenshots": [],
+  "repositoryUrl": null,
+  "version": "0.0.0",
+  "lastUpdated": "2026-03-30"
+}
+

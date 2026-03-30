@@ -1,0 +1,21 @@
+{
+  "$schema": "../scripts/manifest.schema.json",
+  "id": "qickr-pos-learning",
+  "title": "Qickr POS Learning",
+  "shortDescription": "Coming soon — interactive POS system training platform",
+  "description": "Details coming soon.",
+  "technologies": [],
+  "category": "education",
+  "status": "coming-soon",
+  "subdomain": "qickr-pos-learning",
+  "featured": false,
+  "order": 5,
+  "emoji": "🖥️",
+  "accentColor": "#10b981",
+  "highlights": [],
+  "screenshots": [],
+  "repositoryUrl": null,
+  "version": "0.0.0",
+  "lastUpdated": "2026-03-30"
+}
+

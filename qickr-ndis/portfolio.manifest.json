@@ -1,0 +1,27 @@
+{
+  "$schema": "../scripts/manifest.schema.json",
+  "id": "qickr-ndis",
+  "title": "YEMS NDIS",
+  "shortDescription": "Modern NDIS management platform — save $2,536/year",
+  "description": "A comprehensive NDIS management platform built for Australian disability service providers. Replaces legacy systems like ShiftCare at 51% of the cost with unlimited users, 60+ KPIs, full customisation, 7-year audit compliance, real-time analytics, staff/client management, document storage, and an NDIS cost calculator using 2025 support rates.",
+  "technologies": ["Astro", "Tailwind CSS", "TypeScript", "Vercel"],
+  "category": "saas",
+  "status": "live",
+  "subdomain": "qickr-ndis",
+  "featured": true,
+  "order": 2,
+  "emoji": "♿",
+  "accentColor": "#0ea5e9",
+  "highlights": [
+    "Save $2,536/year vs ShiftCare",
+    "Unlimited users — no per-seat fees",
+    "60+ KPIs across 14 chart types",
+    "7-year NDIS-compliant audit log"
+  ],
+  "screenshots": [],
+  "repositoryUrl": null,
+  "liveAppUrl": "https://app.quickrndis.com.au",
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-30"
+}
+

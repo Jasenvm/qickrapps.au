@@ -1,0 +1,91 @@
+name: Sync Manifests & Deploy Portfolio
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+
+  # Nightly at 02:00 UTC to catch any manual manifest edits
+  schedule:
+    - cron: '0 2 * * *'
+
+  # Triggered by sub-project repos via repository_dispatch
+  # Sub-projects should send:
+  #   event_type: manifest-updated
+  #   client_payload: { project: "faithworkz" }
+  repository_dispatch:
+    types: [manifest-updated]
+
+  # Also run when a manifest is pushed directly to this repo
+  push:
+    paths:
+      - '**/portfolio.manifest.json'
+      - 'portfolio/src/**'
+      - 'portfolio/astro.config.mjs'
+      - 'portfolio/package.json'
+
+jobs:
+  sync-and-deploy:
+    name: Sync manifests → build → deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to commit updated projects.json
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: portfolio/package-lock.json
+
+      - name: Log trigger source
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "Updated project: ${{ github.event.client_payload.project }}"
+          fi
+
+      - name: Run sync script
+        run: node scripts/sync-manifests.js
+
+      - name: Check for changes to projects.json
+        id: diff
+        run: |
+          git diff --quiet portfolio/src/data/projects.json \
+            && echo "changed=false" >> "$GITHUB_OUTPUT" \
+            || echo "changed=true"  >> "$GITHUB_OUTPUT"
+
+      - name: Commit updated projects.json (if changed)
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add portfolio/src/data/projects.json
+          git commit -m "chore: sync projects.json from manifests [skip ci]"
+          git push
+
+      - name: Install portfolio dependencies
+        working-directory: portfolio
+        run: npm ci
+
+      - name: Build Astro portfolio
+        working-directory: portfolio
+        run: npm run build
+
+      - name: Deploy to Vercel (production)
+        working-directory: portfolio
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          npm install -g vercel@latest
+          vercel deploy --prod --token "$VERCEL_TOKEN" \
+            --yes \
+            --env VERCEL_ORG_ID="$VERCEL_ORG_ID"
+

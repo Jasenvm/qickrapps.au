@@ -1,0 +1,1 @@
+import{s as m}from"./index-BVq9N_Er.js";async function s(e,a,r,t,n,i){await m.from("member_points").insert({room_id:e,member_name:a,action:r,points:t,related_type:n??null,related_id:i??null})}export{s as a};

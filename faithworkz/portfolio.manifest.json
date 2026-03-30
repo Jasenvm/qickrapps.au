@@ -1,0 +1,26 @@
+{
+  "$schema": "../scripts/manifest.schema.json",
+  "id": "faithworkz",
+  "title": "FaithWorkz",
+  "shortDescription": "Household management PWA for families and housemates",
+  "description": "A full-featured progressive web app for household management. Covers tasks, to-dos, shopping lists, meal planning, recipe books, plant care, budgeting, bills, vehicles, medications, emergency contacts, calendar, journaling, and AI-powered auto-fill — all synced in real time via Supabase and backed by push notifications.",
+  "technologies": ["React", "Vite", "TypeScript", "Supabase", "Ant Design", "PWA"],
+  "category": "productivity",
+  "status": "live",
+  "subdomain": "faithworkz",
+  "featured": true,
+  "order": 1,
+  "emoji": "🏠",
+  "accentColor": "#6366f1",
+  "highlights": [
+    "Real-time multi-user sync via Supabase",
+    "Web Push notifications via Service Worker",
+    "AI-powered shopping & recipe auto-fill",
+    "Offline-capable PWA"
+  ],
+  "screenshots": [],
+  "repositoryUrl": null,
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-30"
+}
+
