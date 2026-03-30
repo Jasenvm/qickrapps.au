@@ -1,24 +1,25 @@
 name: Sync Manifests & Deploy Portfolio
 
 on:
-  # Manual trigger
+  # Manual trigger from GitHub Actions UI
   workflow_dispatch:
 
-  # Nightly at 02:00 UTC to catch any manual manifest edits
+  # Nightly at 02:00 UTC — catches any direct manifest edits
   schedule:
     - cron: '0 2 * * *'
 
   # Triggered by sub-project repos via repository_dispatch
-  # Sub-projects should send:
-  #   event_type: manifest-updated
-  #   client_payload: { project: "faithworkz" }
+  # Send: { "event_type": "manifest-updated", "client_payload": { "project": "faithworkz" } }
   repository_dispatch:
     types: [manifest-updated]
 
-  # Also run when a manifest is pushed directly to this repo
+  # Auto-run when manifests or portfolio source files change on push
   push:
+    branches:
+      - main
     paths:
       - '**/portfolio.manifest.json'
+      - 'scripts/sync-manifests.js'
       - 'portfolio/src/**'
       - 'portfolio/astro.config.mjs'
       - 'portfolio/package.json'
@@ -34,7 +35,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0  # full history so git push works after commit
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -73,10 +74,6 @@ jobs:
         working-directory: portfolio
         run: npm ci
 
-      - name: Build Astro portfolio
-        working-directory: portfolio
-        run: npm run build
-
       - name: Deploy to Vercel (production)
         working-directory: portfolio
         env:
@@ -84,8 +81,7 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
-          npm install -g vercel@latest
-          vercel deploy --prod --token "$VERCEL_TOKEN" \
-            --yes \
-            --env VERCEL_ORG_ID="$VERCEL_ORG_ID"
+          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          npx vercel build --prod --token="$VERCEL_TOKEN"
+          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
 
