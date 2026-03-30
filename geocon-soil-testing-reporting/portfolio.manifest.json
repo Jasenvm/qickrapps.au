@@ -1,0 +1,21 @@
+{
+  "$schema": "../scripts/manifest.schema.json",
+  "id": "geocon-soil-testing",
+  "title": "Geocon Soil Testing",
+  "shortDescription": "Soil testing and reporting using Python 3.8 and Raspberry Pi serial generator for commercial soil testing machines.",
+  "description": "Details coming soon.",
+  "technologies": ["Python", "Raspberry Pi"],
+  "category": "utility",
+  "status": "coming-soon",
+  "subdomain": "geocon-soil-testing",
+  "featured": false,
+  "order": 6,
+  "emoji": "🧪",
+  "accentColor": "#84cc16",
+  "highlights": [],
+  "screenshots": [],
+  "repositoryUrl": null,
+  "version": "0.0.0",
+  "lastUpdated": "2026-03-30"
+}
+

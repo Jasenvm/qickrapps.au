@@ -31,7 +31,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://faithworkz.qickrapps.au",
     "liveAppUrl": null,
-    "_syncedAt": "2026-03-30T13:05:26.136Z"
+    "_syncedAt": "2026-03-30T16:10:11.394Z"
   },
   {
     "id": "qickr-ndis",
@@ -63,7 +63,7 @@
     "version": "1.0.0",
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://qickr-ndis.qickrapps.au",
-    "_syncedAt": "2026-03-30T13:05:26.136Z"
+    "_syncedAt": "2026-03-30T16:10:11.395Z"
   },
   {
     "id": "jjs-gnome",
@@ -85,7 +85,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-03-30T13:05:26.137Z"
+    "_syncedAt": "2026-03-30T16:10:11.396Z"
   },
   {
     "id": "qickr-loyalty",
@@ -107,7 +107,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-03-30T13:05:26.137Z"
+    "_syncedAt": "2026-03-30T16:10:11.396Z"
   },
   {
     "id": "qickr-pos-learning",
@@ -129,6 +129,78 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-03-30T13:05:26.137Z"
+    "_syncedAt": "2026-03-30T16:10:11.396Z"
+  },
+  {
+    "id": "geocon-soil-testing",
+    "title": "Geocon Soil Testing",
+    "shortDescription": "Soil testing and reporting using Python 3.8 and Raspberry Pi serial generator for commercial soil testing machines.",
+    "description": "Details coming soon.",
+    "technologies": [
+      "Python",
+      "Raspberry Pi"
+    ],
+    "category": "utility",
+    "status": "coming-soon",
+    "subdomain": "geocon-soil-testing",
+    "featured": false,
+    "order": 6,
+    "emoji": "🧪",
+    "accentColor": "#84cc16",
+    "highlights": [],
+    "screenshots": [],
+    "repositoryUrl": null,
+    "version": "0.0.0",
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": null,
+    "liveAppUrl": null,
+    "_syncedAt": "2026-03-30T16:10:11.396Z"
+  },
+  {
+    "id": "pwr-trackntrace",
+    "title": "PWR Track'n'Trace",
+    "shortDescription": "Radiator development tool built with Apache Flex and Adobe AIR.",
+    "description": "Details coming soon.",
+    "technologies": [
+      "Apache Flex",
+      "Adobe AIR"
+    ],
+    "category": "utility",
+    "status": "coming-soon",
+    "subdomain": "pwr-trackntrace",
+    "featured": false,
+    "order": 7,
+    "emoji": "🌡️",
+    "accentColor": "#ef4444",
+    "highlights": [],
+    "screenshots": [],
+    "repositoryUrl": null,
+    "version": "0.0.0",
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": null,
+    "liveAppUrl": null,
+    "_syncedAt": "2026-03-30T16:10:11.396Z"
+  },
+  {
+    "id": "qickr-scan",
+    "title": "Qickr Scan",
+    "shortDescription": "Barcode and QR code scanning tool with AI trained specifically on each scanned product.",
+    "description": "Details coming soon.",
+    "technologies": [],
+    "category": "utility",
+    "status": "coming-soon",
+    "subdomain": "qickr-scan",
+    "featured": false,
+    "order": 8,
+    "emoji": "📷",
+    "accentColor": "#06b6d4",
+    "highlights": [],
+    "screenshots": [],
+    "repositoryUrl": null,
+    "version": "0.0.0",
+    "lastUpdated": "2026-03-30",
+    "subdomainUrl": null,
+    "liveAppUrl": null,
+    "_syncedAt": "2026-03-30T16:10:11.396Z"
   }
 ]

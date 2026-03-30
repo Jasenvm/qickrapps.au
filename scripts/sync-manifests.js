@@ -27,6 +27,9 @@ const SUB_PROJECTS = [
   'jjs_clone_gnome',
   'qickr-layalty-program',
   'qickr-pos-learning',
+  'geocon-soil-testing-reporting',
+  'pwr-trackntrace',
+  'qickr-scan',
 ];
 
 // ── Schema helpers ────────────────────────────────────────────────────────────
