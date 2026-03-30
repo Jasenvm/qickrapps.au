@@ -1,0 +1,117 @@
+# qickrapps.au — Project Rules & Architecture
+
+## Overview
+This repo is a **portfolio monorepo** that aggregates multiple sub-projects under the
+`qickrapps.au` domain. The root hosts each sub-project as a top-level folder. A central
+Astro 5 shell (`portfolio/`) serves as the public-facing hub at `qickrapps.au`.
+
+---
+
+## Repository Structure
+
+```
+qickrapps.au/                          ← repo root
+├── portfolio/                         ← Astro 5 portfolio hub (deployed to qickrapps.au)
+│   ├── src/data/projects.json         ← AUTO-GENERATED — do not edit by hand
+│   ├── src/pages/
+│   ├── src/components/
+│   └── vercel.json
+├── scripts/
+│   └── sync-manifests.js              ← aggregates manifests → projects.json
+├── .github/workflows/
+│   └── sync-manifests.yml             ← CI/CD: sync + build + deploy on push
+├── faithworkz/                        ← live sub-project
+├── qickr-ndis/                        ← live sub-project
+├── jjs_clone_gnome/                   ← coming-soon placeholder
+├── qickr-layalty-program/             ← coming-soon placeholder
+├── qickr-pos-learning/                ← coming-soon placeholder
+├── geocon-soil-testing-reporting/     ← coming-soon placeholder
+├── pwr-trackntrace/                   ← coming-soon placeholder
+└── qickr-scan/                        ← coming-soon placeholder
+```
+
+---
+
+## Adding a New Project
+
+1. Create a folder at the repo root: `my-new-project/`
+2. Add `my-new-project/portfolio.manifest.json` (see schema below)
+3. Register the folder name in `scripts/sync-manifests.js` → `SUB_PROJECTS` array
+4. Push to `main` — GitHub Actions auto-syncs and redeploys
+
+### Minimum manifest (coming-soon):
+```json
+{
+  "$schema": "../scripts/manifest.schema.json",
+  "id": "my-new-project",
+  "title": "My New Project",
+  "shortDescription": "One-line description shown on the portfolio card.",
+  "description": "Details coming soon.",
+  "technologies": [],
+  "category": "utility",
+  "status": "coming-soon",
+  "subdomain": "my-new-project",
+  "featured": false,
+  "order": 9,
+  "emoji": "🚀",
+  "accentColor": "#6366f1",
+  "highlights": [],
+  "screenshots": [],
+  "repositoryUrl": null,
+  "version": "0.0.0",
+  "lastUpdated": "YYYY-MM-DD"
+}
+```
+
+### Status values: `"live"` | `"coming-soon"` | `"archived"`
+
+---
+
+## Manifest-Driven Sync
+
+- **Script**: `node scripts/sync-manifests.js`
+- **Input**: `<project-dir>/portfolio.manifest.json` for every entry in `SUB_PROJECTS`
+- **Output**: `portfolio/src/data/projects.json` (sorted by `order` field)
+- **Dry run**: `node scripts/sync-manifests.js --dry-run`
+- `projects.json` is committed by the bot and must never be edited manually
+
+---
+
+## CI/CD Pipeline (GitHub Actions)
+
+File: `.github/workflows/sync-manifests.yml`
+
+**Triggers:**
+- Push to `main` touching any `portfolio.manifest.json`, `scripts/sync-manifests.js`, or `portfolio/src/**`
+- `workflow_dispatch` (manual trigger from GitHub Actions UI)
+- `repository_dispatch` with `event_type: manifest-updated` (for external sub-project repos)
+- Nightly cron at `02:00 UTC`
+
+**Steps:** Checkout → Node 20 → Sync manifests → Commit if changed → `npm ci` → Vercel pull/build/deploy
+
+**Required Repository Secrets** (Settings → Secrets → Actions → Repository secrets):
+- `VERCEL_TOKEN` — from vercel.com/account/tokens (Full Account scope)
+- `VERCEL_ORG_ID` — `team_GriAJJCtGClrY7QoCnKX777r`
+- `VERCEL_PROJECT_ID` — `prj_LAG0ohTiy8Yp0x6jNS9TvdNNAa1y`
+
+> ⚠️ Secrets must be **Repository secrets**, NOT Environment secrets, or the runner will not receive them.
+
+---
+
+## Vercel Deployment
+
+- **Portfolio hub**: deployed from `portfolio/` → `qickrapps.au` / `www.qickrapps.au`
+- **Sub-projects**: deployed separately and mapped to `<subdomain>.qickrapps.au`
+- The portfolio is a **static Astro build** — `projects.json` is baked in at build time.
+  Any manifest change requires a redeploy (handled automatically by CI/CD).
+
+---
+
+## Key Conventions
+
+- Sub-project folders use **kebab-case** (e.g., `qickr-scan`) except legacy `jjs_clone_gnome` and `qickr-layalty-program`
+- Each sub-project owns its own `vercel.json` for routing
+- The `[skip ci]` commit message suffix prevents the bot's `projects.json` commit from re-triggering the workflow
+- `portfolio/dist/` and `portfolio/node_modules/` are gitignored
+- `projects.json` changes are committed by `github-actions[bot]` — expect these commits in history
+
