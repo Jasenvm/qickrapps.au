@@ -31,7 +31,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://faithworkz.qickrapps.au",
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-04T03:09:02.018Z"
+    "_syncedAt": "2026-04-05T03:12:39.900Z"
   },
   {
     "id": "qickr-ndis",
@@ -63,7 +63,7 @@
     "version": "1.0.0",
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://qickr-ndis.qickrapps.au",
-    "_syncedAt": "2026-04-04T03:09:02.018Z"
+    "_syncedAt": "2026-04-05T03:12:39.900Z"
   },
   {
     "id": "jjs-gnome",
@@ -85,7 +85,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-04T03:09:02.018Z"
+    "_syncedAt": "2026-04-05T03:12:39.901Z"
   },
   {
     "id": "qickr-loyalty",
@@ -107,7 +107,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-04T03:09:02.018Z"
+    "_syncedAt": "2026-04-05T03:12:39.901Z"
   },
   {
     "id": "qickr-pos-learning",
@@ -129,7 +129,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-04T03:09:02.018Z"
+    "_syncedAt": "2026-04-05T03:12:39.901Z"
   },
   {
     "id": "geocon-soil-testing",
@@ -154,7 +154,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-04T03:09:02.019Z"
+    "_syncedAt": "2026-04-05T03:12:39.901Z"
   },
   {
     "id": "pwr-trackntrace",
@@ -179,7 +179,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-04T03:09:02.019Z"
+    "_syncedAt": "2026-04-05T03:12:39.901Z"
   },
   {
     "id": "qickr-scan",
@@ -201,6 +201,6 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-04T03:09:02.019Z"
+    "_syncedAt": "2026-04-05T03:12:39.901Z"
   }
 ]
