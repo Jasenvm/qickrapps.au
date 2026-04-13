@@ -1,12 +1,12 @@
 # 🏥 Portfolio Health Check
 
-> Generated: **Mon, 13 Apr 2026 07:24:27 GMT** · Duration: **527ms** · Projects: **8**
+> Generated: **Mon, 13 Apr 2026 07:40:22 GMT** · Duration: **482ms** · Projects: **8**
 
 | | Status | Count |
 |---|---|---|
-| 🟢 | Healthy | 2 |
+| 🟢 | Healthy | 3 |
 | 🟡 | Stale | 0 |
-| 🔴 | Offline / Error | 1 |
+| 🔴 | Offline / Error | 0 |
 | ⚪ | Placeholder | 5 |
 
 ## 🟢 Healthy
@@ -25,13 +25,12 @@
 - **Manifest:** v`1.0.0` (2026-03-30)
 - **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
 
-## 🔴 Offline / Error
-
 ### Qickr POS Training Simulator
 
-- **URL:** https://qickr-pos-training-simulator.qickrapps.au
+- **URL:** https://qickr-pos-training-simulator.qickrapps.au/demo
+- **HTTP status:** 200
 - **Manifest:** v`0.1.0` (2026-04-13)
-- **Note:** fetch failed
+- **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
 
 ## ⚪ Placeholder
 
