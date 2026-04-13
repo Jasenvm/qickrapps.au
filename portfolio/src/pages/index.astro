@@ -85,6 +85,7 @@ const techSet     = [...new Set(projects.flatMap((p) => p.technologies))];
               status={project.status as 'live' | 'in-progress' | 'coming-soon'}
               subdomainUrl={project.subdomainUrl}
               liveAppUrl={project.liveAppUrl}
+              repositoryUrl={project.repositoryUrl}
               featured={project.featured}
               emoji={project.emoji}
               accentColor={project.accentColor}

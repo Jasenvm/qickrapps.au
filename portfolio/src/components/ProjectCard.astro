@@ -7,6 +7,7 @@ interface Props {
   status: 'live' | 'in-progress' | 'coming-soon';
   subdomainUrl: string | null;
   liveAppUrl?: string | null;
+  repositoryUrl?: string | null;
   featured: boolean;
   emoji: string;
   accentColor: string;
@@ -20,6 +21,7 @@ const {
   status,
   subdomainUrl,
   liveAppUrl,
+  repositoryUrl,
   featured,
   emoji,
   accentColor,
@@ -38,7 +40,7 @@ const statusClass: Record<string, string> = {
   'coming-soon': 'status--soon',
 };
 
-const primaryUrl = subdomainUrl ?? liveAppUrl ?? null;
+const hasAnyUrl = !!(liveAppUrl || subdomainUrl || repositoryUrl);
 ---
 
 <article class:list={['card', { 'card--featured': featured }]} style={`--accent: ${accentColor};`}>
@@ -69,10 +71,24 @@ const primaryUrl = subdomainUrl ?? liveAppUrl ?? null;
   )}
 
   <div class="card__footer">
-    {primaryUrl ? (
-      <a href={primaryUrl} class="btn btn--primary" target="_blank" rel="noopener noreferrer">
-        View Project →
-      </a>
+    {hasAnyUrl ? (
+      <div class="btn-group">
+        {liveAppUrl && (
+          <a href={liveAppUrl} class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            App ↗
+          </a>
+        )}
+        {subdomainUrl && (
+          <a href={subdomainUrl} class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+            Website ↗
+          </a>
+        )}
+        {repositoryUrl && (
+          <a href={repositoryUrl} class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        )}
+      </div>
     ) : (
       <span class="btn btn--disabled" aria-disabled="true">Coming Soon</span>
     )}
@@ -166,19 +182,36 @@ const primaryUrl = subdomainUrl ?? liveAppUrl ?? null;
 
   .card__footer { margin-top: auto; padding-top: 8px; }
 
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .btn {
     display: inline-block;
-    font-size: 0.875rem;
+    font-size: 0.82rem;
     font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background var(--transition), opacity var(--transition);
+    padding: 8px 16px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background var(--transition), opacity var(--transition),
+                border-color var(--transition), color var(--transition);
   }
   .btn--primary {
     background: var(--accent);
     color: #fff;
   }
   .btn--primary:hover { opacity: 0.85; }
+  .btn--ghost {
+    background: transparent;
+    color: var(--color-muted);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .btn--ghost:hover {
+    border-color: var(--accent);
+    color: var(--color-text);
+  }
   .btn--disabled {
     background: rgba(255,255,255,0.06);
     color: var(--color-muted);
