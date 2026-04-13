@@ -1,6 +1,6 @@
 # 🏥 Portfolio Health Check
 
-> Generated: **Mon, 13 Apr 2026 06:55:06 GMT** · Duration: **399ms** · Projects: **8**
+> Generated: **Mon, 13 Apr 2026 07:16:14 GMT** · Duration: **389ms** · Projects: **8**
 
 | | Status | Count |
 |---|---|---|
@@ -27,7 +27,7 @@
 
 ### Qickr POS Training Simulator
 
-- **URL:** https://qickr-pos-training-simulator.vercel.app
+- **URL:** https://qickr-pos-training-simulator.qickrapps.au
 - **HTTP status:** 200
 - **Manifest:** v`0.1.0` (2026-04-13)
 - **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
