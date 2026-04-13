@@ -31,7 +31,7 @@
     "version": "1.0.0",
     "lastUpdated": "2026-04-13",
     "subdomainUrl": "https://faithworkz.qickrapps.au",
-    "_syncedAt": "2026-04-13T05:40:16.512Z"
+    "_syncedAt": "2026-04-13T05:42:18.161Z"
   },
   {
     "id": "qickr-ndis",
@@ -59,11 +59,11 @@
     ],
     "screenshots": [],
     "repositoryUrl": null,
-    "liveAppUrl": "https://app.quickrndis.com.au",
+    "liveAppUrl": "https://yems.qickrapps.com",
     "version": "1.0.0",
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://qickr-ndis.qickrapps.au",
-    "_syncedAt": "2026-04-13T05:40:16.513Z"
+    "_syncedAt": "2026-04-13T05:42:18.161Z"
   },
   {
     "id": "jjs-gnome",
@@ -85,7 +85,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T05:40:16.513Z"
+    "_syncedAt": "2026-04-13T05:42:18.162Z"
   },
   {
     "id": "qickr-loyalty",
@@ -107,7 +107,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T05:40:16.513Z"
+    "_syncedAt": "2026-04-13T05:42:18.162Z"
   },
   {
     "id": "qickr-pos-training-simulator",
@@ -138,7 +138,7 @@
     "version": "0.1.0",
     "lastUpdated": "2026-04-13",
     "subdomainUrl": "https://qickr-pos-training-simulator.qickrapps.au",
-    "_syncedAt": "2026-04-13T05:40:16.513Z"
+    "_syncedAt": "2026-04-13T05:42:18.162Z"
   },
   {
     "id": "geocon-soil-testing",
@@ -163,7 +163,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T05:40:16.513Z"
+    "_syncedAt": "2026-04-13T05:42:18.162Z"
   },
   {
     "id": "pwr-trackntrace",
@@ -188,7 +188,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T05:40:16.513Z"
+    "_syncedAt": "2026-04-13T05:42:18.162Z"
   },
   {
     "id": "qickr-scan",
@@ -210,6 +210,6 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T05:40:16.514Z"
+    "_syncedAt": "2026-04-13T05:42:18.162Z"
   }
 ]
