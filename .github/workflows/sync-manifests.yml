@@ -20,6 +20,7 @@ on:
     paths:
       - '**/portfolio.manifest.json'
       - 'scripts/sync-manifests.js'
+      - 'scripts/verify-health.js'
       - 'portfolio/src/**'
       - 'portfolio/astro.config.mjs'
       - 'portfolio/package.json'
@@ -84,4 +85,18 @@ jobs:
           npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
           npx vercel build --prod --token="$VERCEL_TOKEN"
           npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+
+      - name: Health check (post-deploy)
+        id: health
+        continue-on-error: true  # offline projects set exit 1 — report but don't block
+        run: node scripts/verify-health.js
+
+      - name: Commit health report
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add REPORTS/HEALTH_CHECK.md || true
+          git diff --cached --quiet \
+            || git commit -m "chore: update health check report [skip ci]"
+          git push || true
 
