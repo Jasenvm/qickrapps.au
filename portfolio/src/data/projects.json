@@ -31,7 +31,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://faithworkz.qickrapps.au",
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T03:15:31.971Z"
+    "_syncedAt": "2026-04-13T04:45:59.322Z"
   },
   {
     "id": "qickr-ndis",
@@ -63,7 +63,7 @@
     "version": "1.0.0",
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://qickr-ndis.qickrapps.au",
-    "_syncedAt": "2026-04-13T03:15:31.971Z"
+    "_syncedAt": "2026-04-13T04:45:59.322Z"
   },
   {
     "id": "jjs-gnome",
@@ -85,7 +85,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T03:15:31.971Z"
+    "_syncedAt": "2026-04-13T04:45:59.322Z"
   },
   {
     "id": "qickr-loyalty",
@@ -107,17 +107,17 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T03:15:31.971Z"
+    "_syncedAt": "2026-04-13T04:45:59.322Z"
   },
   {
-    "id": "qickr-pos-learning",
-    "title": "Qickr POS Learning",
+    "id": "qickr-pos-training",
+    "title": "Qickr POS Training",
     "shortDescription": "Coming soon — interactive POS system training platform",
     "description": "Details coming soon.",
     "technologies": [],
     "category": "education",
     "status": "coming-soon",
-    "subdomain": "qickr-pos-learning",
+    "subdomain": "qickr-pos-training",
     "featured": false,
     "order": 5,
     "emoji": "🖥️",
@@ -129,7 +129,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T03:15:31.971Z"
+    "_syncedAt": "2026-04-13T04:45:59.323Z"
   },
   {
     "id": "geocon-soil-testing",
@@ -154,7 +154,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T03:15:31.972Z"
+    "_syncedAt": "2026-04-13T04:45:59.323Z"
   },
   {
     "id": "pwr-trackntrace",
@@ -179,7 +179,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T03:15:31.972Z"
+    "_syncedAt": "2026-04-13T04:45:59.323Z"
   },
   {
     "id": "qickr-scan",
@@ -201,6 +201,6 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T03:15:31.972Z"
+    "_syncedAt": "2026-04-13T04:45:59.323Z"
   }
 ]
