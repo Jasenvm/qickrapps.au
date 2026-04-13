@@ -31,7 +31,7 @@
     "version": "1.0.0",
     "lastUpdated": "2026-04-13",
     "subdomainUrl": "https://faithworkz.qickrapps.au",
-    "_syncedAt": "2026-04-13T06:54:46.324Z"
+    "_syncedAt": "2026-04-13T07:15:54.024Z"
   },
   {
     "id": "qickr-ndis",
@@ -63,7 +63,7 @@
     "version": "1.0.0",
     "lastUpdated": "2026-03-30",
     "subdomainUrl": "https://qickr-ndis.qickrapps.au",
-    "_syncedAt": "2026-04-13T06:54:46.325Z"
+    "_syncedAt": "2026-04-13T07:15:54.025Z"
   },
   {
     "id": "jjs-gnome",
@@ -85,7 +85,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T06:54:46.325Z"
+    "_syncedAt": "2026-04-13T07:15:54.025Z"
   },
   {
     "id": "qickr-loyalty",
@@ -107,7 +107,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T06:54:46.325Z"
+    "_syncedAt": "2026-04-13T07:15:54.025Z"
   },
   {
     "id": "qickr-pos-training-simulator",
@@ -134,11 +134,11 @@
     ],
     "screenshots": [],
     "repositoryUrl": "https://github.com/Jasenvm/qickr-pos-training-simulator",
-    "liveAppUrl": "https://qickr-pos-training-simulator.vercel.app",
+    "liveAppUrl": "https://qickr-pos-training-simulator.qickrapps.au",
     "version": "0.1.0",
     "lastUpdated": "2026-04-13",
     "subdomainUrl": "https://qickr-pos-training-simulator.qickrapps.au",
-    "_syncedAt": "2026-04-13T06:54:46.325Z"
+    "_syncedAt": "2026-04-13T07:15:54.025Z"
   },
   {
     "id": "geocon-soil-testing",
@@ -163,7 +163,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T06:54:46.325Z"
+    "_syncedAt": "2026-04-13T07:15:54.025Z"
   },
   {
     "id": "pwr-trackntrace",
@@ -188,7 +188,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T06:54:46.325Z"
+    "_syncedAt": "2026-04-13T07:15:54.026Z"
   },
   {
     "id": "qickr-scan",
@@ -210,6 +210,6 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T06:54:46.326Z"
+    "_syncedAt": "2026-04-13T07:15:54.026Z"
   }
 ]
