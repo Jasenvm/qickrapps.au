@@ -6,7 +6,7 @@
   "description": "A POS training simulator built with Next.js 14, TypeScript, and Tailwind CSS. Driven by Figma designs to replicate real point-of-sale button layouts, enabling staff to practise till operations in a safe, interactive environment.",
   "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Figma"],
   "category": "education",
-  "status": "coming-soon",
+  "status": "live",
   "subdomain": "qickr-pos-training-simulator",
   "featured": false,
   "order": 5,
@@ -19,7 +19,8 @@
   ],
   "screenshots": [],
   "repositoryUrl": "https://github.com/Jasenvm/qickr-pos-training-simulator",
-  "version": "0.0.0",
+  "liveAppUrl": "https://qickr-pos-training-simulator.vercel.app",
+  "version": "0.1.0",
   "lastUpdated": "2026-04-13"
 }
 
