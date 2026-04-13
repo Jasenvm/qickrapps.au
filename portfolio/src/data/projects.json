@@ -31,7 +31,7 @@
     "liveAppUrl": "https://faith-workz.vercel.app",
     "version": "1.0.0",
     "lastUpdated": "2026-04-13",
-    "_syncedAt": "2026-04-13T11:00:43.121Z"
+    "_syncedAt": "2026-04-13T11:01:44.311Z"
   },
   {
     "id": "qickr-ndis",
@@ -63,7 +63,7 @@
     "liveAppUrl": "https://app.quickrndis.com.au",
     "version": "1.0.0",
     "lastUpdated": "2026-03-30",
-    "_syncedAt": "2026-04-13T11:00:43.121Z"
+    "_syncedAt": "2026-04-13T11:01:44.311Z"
   },
   {
     "id": "jjs-gnome",
@@ -85,7 +85,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T11:00:43.122Z"
+    "_syncedAt": "2026-04-13T11:01:44.311Z"
   },
   {
     "id": "qickr-loyalty",
@@ -107,7 +107,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T11:00:43.122Z"
+    "_syncedAt": "2026-04-13T11:01:44.312Z"
   },
   {
     "id": "qickr-pos-training-simulator",
@@ -138,7 +138,7 @@
     "version": "0.1.0",
     "lastUpdated": "2026-04-13",
     "subdomainUrl": "https://qickr-pos-training-simulator.qickrapps.au",
-    "_syncedAt": "2026-04-13T11:00:43.122Z"
+    "_syncedAt": "2026-04-13T11:01:44.312Z"
   },
   {
     "id": "geocon-soil-testing",
@@ -163,7 +163,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T11:00:43.122Z"
+    "_syncedAt": "2026-04-13T11:01:44.312Z"
   },
   {
     "id": "pwr-trackntrace",
@@ -188,7 +188,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T11:00:43.122Z"
+    "_syncedAt": "2026-04-13T11:01:44.312Z"
   },
   {
     "id": "qickr-scan",
@@ -210,6 +210,6 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T11:00:43.122Z"
+    "_syncedAt": "2026-04-13T11:01:44.312Z"
   }
 ]
