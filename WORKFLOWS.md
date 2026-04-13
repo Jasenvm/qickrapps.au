@@ -159,3 +159,82 @@ Expected green steps:
 7. Install portfolio dependencies
 8. Deploy to Vercel (production) ✅
 
+---
+
+## 9. Deploy a FaithWorkz Marketing Site Update
+
+The FaithWorkz marketing site lives in `faithworkz/marketing/` in the **FaithWorkz repo**
+(not this monorepo). It deploys to a separate Vercel project and must be pushed manually.
+
+```bash
+# From inside the FaithWorkz repo
+cd marketing
+npx vercel deploy --prod
+
+# Re-apply the custom alias after every production deploy
+npx vercel alias set <returned-deployment-url> faith-workz-marketing.vercel.app \
+  --scope team_GriAJJCtGClrY7QoCnKX777r
+
+# Verify
+curl -s -o /dev/null -w "%{http_code}" https://faith-workz-marketing.vercel.app
+# Expected: 200
+```
+
+> **Why `npx serve` locally but not on Vercel?**
+> Opening `index.html` via `file://` in a browser blocks fetch() and CORS. `npx serve`
+> spins up a local HTTP server so the browser treats it as `http://localhost`. On Vercel,
+> files are served over HTTPS directly — no local server needed.
+
+---
+
+## 10. Audit Live URLs (App vs. Marketing Check)
+
+Run whenever manifests are updated or a new project goes live, to verify each URL
+serves the expected content type.
+
+```bash
+# Create a temporary audit script (delete after use)
+# See scripts/_check-domains.mjs for the full template
+
+node scripts/_check-domains.mjs
+```
+
+**URL role convention:**
+
+| Manifest field | Card button | Should serve |
+|---|---|---|
+| `subdomainUrl` | Website ↗ (ghost) | Marketing / landing page |
+| `liveAppUrl` | App ↗ (primary) | The interactive application |
+
+**Quick manual check per URL:**
+```bash
+curl -sL https://my-url.com | head -30
+# Look for: <title>, login/dashboard keywords, or marketing hero/CTA text
+```
+
+**Live URL map (April 2026):**
+
+| Project | Website (subdomainUrl) | App (liveAppUrl) |
+|---|---|---|
+| 🏠 FaithWorkz | faith-workz-marketing.vercel.app | faithworkz.qickrapps.au |
+| ♿ YEMS NDIS | qickr-ndis.qickrapps.au | app.quickrndis.com.au |
+| 🖥️ POS Simulator | qickr-pos-training-simulator.qickrapps.au | qickr-pos-training-simulator.qickrapps.au |
+
+---
+
+## 11. Resolve `projects.json` Merge Conflict (CI bot race)
+
+The CI bot commits `projects.json` after every push. If you've also committed it locally,
+a conflict will occur on the next pull.
+
+```bash
+# Cleanest resolution — regenerate from source and complete the merge
+git fetch origin
+git merge origin/main --no-edit   # conflict will appear on projects.json
+
+node scripts/sync-manifests.js    # regenerates authoritative version
+git add portfolio/src/data/projects.json
+git commit --no-edit
+git push
+```
+

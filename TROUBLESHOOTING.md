@@ -63,17 +63,20 @@ hint: Updates were rejected because the remote contains work that you do not hav
 ```
 
 **Root Cause:**
-The GitHub Actions bot commits an updated `projects.json` with `[skip ci]` after the sync step.
+The GitHub Actions bot commits an updated `projects.json` after the sync step.
 If you push locally at the same time (or shortly after), your local branch is behind.
 
 **Fix:**
 ```bash
-git pull --rebase
+git fetch origin
+git merge origin/main --no-edit   # preferred over rebase (see below)
 git push
 ```
 
-The rebase applies your commit on top of the bot's commit cleanly, with no merge conflicts
-(the bot only ever touches `portfolio/src/data/projects.json`).
+> **Why `merge` instead of `rebase`?**
+> `git pull --rebase` will fail with _"cannot pull with rebase: You have unstaged changes"_
+> if you have any untracked or modified files in the working tree (e.g. new assets from a
+> sub-project build). `git merge` is safer here because it does not require a clean tree.
 
 ---
 
@@ -138,12 +141,134 @@ from looping back.
 
 ---
 
+## ❌ `git pull --rebase` fails — "cannot pull with rebase: You have unstaged changes"
+
+**Symptom:**
+```
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+```
+
+**Root Cause:**
+Untracked or modified files in the working tree (e.g. compiled sub-project assets, new
+`vercel.json` files, or leftover stash-pop artifacts) block `--rebase`.
+
+**Fix:**
+Use merge instead, or temporarily stash then restore:
+```bash
+# Option A — merge (safest, no clean-tree requirement)
+git fetch origin && git merge origin/main --no-edit
+
+# Option B — stash, rebase, restore
+git stash
+git pull --rebase
+git stash pop
+```
+
+If a stash pop creates merge conflicts in `portfolio/src/data/projects.json`, resolve by
+regenerating it from source:
+```bash
+node scripts/sync-manifests.js
+git add portfolio/src/data/projects.json
+git merge --continue   # or git rebase --continue
+```
+
+---
+
+## ❌ `projects.json` merge conflict with CI bot
+
+**Symptom:**
+```
+CONFLICT (content): Merge conflict in portfolio/src/data/projects.json
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+**Root Cause:**
+The CI bot regenerates `projects.json` after every push. If you also run
+`node scripts/sync-manifests.js` locally and commit the result, both versions diverge
+(different `_syncedAt` timestamps, sometimes different field ordering).
+
+**Fix — always authoritative:**
+```bash
+# Let your local manifests win — regenerate fresh, then complete the merge/rebase
+node scripts/sync-manifests.js
+git add portfolio/src/data/projects.json
+git commit --no-edit   # for merge
+# or
+git rebase --continue  # for rebase
+git push
+```
+
+**Prevention:** Don't commit `projects.json` locally unless you need to test the Astro
+build. The CI bot is the canonical writer — let it handle it.
+
+---
+
+## ❌ Custom subdomain returns 404 after Vercel domain assignment
+
+**Symptom:**
+`curl https://my-subdomain.qickrapps.au` returns `404` even though the domain was added
+in the Vercel dashboard.
+
+**Root Cause — two possible causes:**
+1. **DNS not yet propagated** — new DNS records take 1–60 minutes.
+2. **Domain added to project but not aliased to a deployment** — Vercel requires the domain
+   to be assigned to a specific production deployment, not just the project.
+
+**Fix:**
+```bash
+# Confirm the domain is visible on the project
+npx vercel domains ls --scope team_GriAJJCtGClrY7QoCnKX777r
+
+# If DNS is propagated but still 404, force-alias to latest production deployment
+npx vercel alias set <deployment-url>.vercel.app my-subdomain.qickrapps.au \
+  --scope team_GriAJJCtGClrY7QoCnKX777r
+```
+
+**macOS DNS cache flush (if local curl returns stale result):**
+```bash
+sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+```
+
+---
+
+## ❌ Domain audit: URL serves wrong content (app vs. marketing)
+
+**Symptom:**
+The portfolio card's "App" button opens a marketing page, or "Website" opens the actual app.
+
+**Root Cause:**
+`subdomainUrl` and `liveAppUrl` were set without verifying what each URL actually serves.
+Common gotchas discovered during audit (April 2026):
+
+| Project | Issue found |
+|---|---|
+| FaithWorkz | `faithworkz.qickrapps.au` and `faith-workz.vercel.app` served **identical** React SPA — no separate marketing page existed yet |
+| YEMS NDIS | `yems.qickrapps.com` served a Refine.dev default scaffold; the real app is at `app.quickrndis.com.au` |
+| POS Simulator | Root `/` is the actual simulator; `/demo` is a developer component showcase — roles were reversed in the manifest |
+
+**Fix:**
+Run the domain audit script to verify what each URL actually serves before committing URLs:
+```bash
+node scripts/_check-domains.mjs   # temporary audit script — delete after use
+```
+Then cross-reference the HTML `<title>`, word count, SPA signals, and login/dashboard keywords.
+
+**Convention going forward:**
+- `subdomainUrl` → the branded `*.qickrapps.au` marketing / landing page (ghost button: "Website ↗")
+- `liveAppUrl` → wherever the interactive application actually runs (primary button: "App ↗")
+
+---
+
 ## 📝 Key IDs for reference
 
 | Resource | Value |
 |---|---|
 | Vercel Org ID | `team_GriAJJCtGClrY7QoCnKX777r` |
-| Vercel Project ID (portfolio) | `prj_LAG0ohTiy8Yp0x6jNS9TvdNNAa1y` |
+| Vercel Project ID (portfolio hub) | `prj_LAG0ohTiy8Yp0x6jNS9TvdNNAa1y` |
+| Vercel Project ID (FaithWorkz app) | `prj_5Rr3bB3kdtYZt7JKvtm9ApYAu9op` |
+| Vercel Project ID (FaithWorkz marketing) | `prj_GqtyUh5QIQE53VCuJriIxH50vvAv` |
+| Vercel Project ID (POS Simulator) | `prj_bBWmTKzk7fwUR8ZCBkiJIzTHeYfG` |
 | GitHub repo | `github.com/Jasenvm/qickrapps.au` |
 | Production URL | `https://qickrapps.au` |
 | Vercel project dashboard | https://vercel.com/jasenvm/qickrapps-portfolio |

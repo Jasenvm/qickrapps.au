@@ -28,7 +28,8 @@ The sync script (`scripts/sync-manifests.js`) reads these files and writes
 | `highlights` | string[] | ✅ | Up to 3 bullet points shown on the card. Empty `[]` is valid. |
 | `screenshots` | string[] | No | URLs. Reserved for future use. Use `[]`. |
 | `repositoryUrl` | string \| null | No | GitHub link. `null` for private repos. |
-| `liveAppUrl` | string \| null | No | Override URL when the live app is not at the subdomain. |
+| `subdomainUrl` | string \| null | No | Explicit URL for the marketing/landing page. Auto-built from `subdomain` if omitted. Renders as ghost "Website ↗" button. |
+| `liveAppUrl` | string \| null | No | URL for the interactive application. Renders as primary "App ↗" button. Set to `null` if no separate app URL exists. |
 | `version` | string | No | SemVer. Informational only. |
 | `lastUpdated` | string | No | ISO date `YYYY-MM-DD`. |
 
@@ -47,15 +48,46 @@ The sync script (`scripts/sync-manifests.js`) reads these files and writes
 
 ---
 
-## How `subdomainUrl` is Resolved
+## URL Fields — Convention & Card Button Mapping
 
-The sync script auto-computes `subdomainUrl` from the manifest:
+Two URL fields control the buttons rendered on each project card:
 
-- If `status !== "live"` → `subdomainUrl = null` (no link on the card)
-- If `liveAppUrl` is set → uses `liveAppUrl` as the primary link
-- Otherwise → `https://{subdomain}.qickrapps.au`
+| Field | Card button | Style | When to set |
+|---|---|---|---|
+| `liveAppUrl` | **App ↗** | Primary (filled) | URL of the interactive application — may be a different domain or sub-path from the subdomain |
+| `subdomainUrl` | **Website ↗** | Ghost (outline) | URL of the marketing / landing page — set explicitly or auto-built |
 
-You can override this entirely by setting `subdomainUrl` directly in the manifest (advanced).
+### How `subdomainUrl` is resolved by the sync script
+
+1. If `status !== "live"` → `null` (no button shown)
+2. If `subdomainUrl` is set explicitly in the manifest → use that value
+3. Otherwise → auto-build as `https://{subdomain}.qickrapps.au`
+
+### Dual-button pattern (recommended for live projects)
+
+Set **both** fields to give the card two distinct, meaningful links:
+
+```json
+"subdomainUrl": "https://my-project.qickrapps.au",
+"liveAppUrl":   "https://app.my-project.com"
+```
+
+### Single-button pattern
+
+Omit `liveAppUrl` (or set to `null`) when there is no separate application URL — the card
+shows only the "Website ↗" ghost button pointing to `subdomainUrl`.
+
+### Real project examples (April 2026)
+
+| Project | subdomainUrl (Website ↗) | liveAppUrl (App ↗) |
+|---|---|---|
+| FaithWorkz | `faith-workz-marketing.vercel.app` | `faithworkz.qickrapps.au` |
+| YEMS NDIS | `qickr-ndis.qickrapps.au` | `app.quickrndis.com.au` |
+| POS Simulator | `qickr-pos-training-simulator.qickrapps.au` | *(same — no separate app URL yet)* |
+
+> ⚠️ **Always verify URLs before committing.** Run a quick `curl -sL <url> | head -20` to
+> confirm the page content matches the intended role (app vs. marketing). See
+> `TROUBLESHOOTING.md` for the domain audit workflow.
 
 ---
 
@@ -83,8 +115,10 @@ You can override this entirely by setting `subdomainUrl` directly in the manifes
   ],
   "screenshots": [],
   "repositoryUrl": null,
+  "subdomainUrl": "https://faithworkz.qickrapps.au",
+  "liveAppUrl": "https://faithworkz.qickrapps.au",
   "version": "1.0.0",
-  "lastUpdated": "2026-03-30"
+  "lastUpdated": "2026-04-13"
 }
 ```
 
