@@ -20,7 +20,8 @@
   ],
   "screenshots": [],
   "repositoryUrl": null,
-  "liveAppUrl": "https://faithworkz.qickrapps.au",
+  "subdomainUrl": "https://faithworkz.qickrapps.au",
+  "liveAppUrl": "https://faith-workz.vercel.app",
   "version": "1.0.0",
   "lastUpdated": "2026-04-13"
 }

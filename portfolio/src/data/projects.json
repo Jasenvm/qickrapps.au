@@ -31,7 +31,7 @@
     "liveAppUrl": "https://faith-workz.vercel.app",
     "version": "1.0.0",
     "lastUpdated": "2026-04-13",
-    "_syncedAt": "2026-04-13T07:40:03.466Z"
+    "_syncedAt": "2026-04-13T10:59:43.793Z"
   },
   {
     "id": "qickr-ndis",
@@ -60,10 +60,10 @@
     "screenshots": [],
     "repositoryUrl": null,
     "subdomainUrl": "https://qickr-ndis.qickrapps.au",
-    "liveAppUrl": "https://yems.qickrapps.com",
+    "liveAppUrl": "https://app.quickrndis.com.au",
     "version": "1.0.0",
     "lastUpdated": "2026-03-30",
-    "_syncedAt": "2026-04-13T07:40:03.466Z"
+    "_syncedAt": "2026-04-13T10:59:43.794Z"
   },
   {
     "id": "jjs-gnome",
@@ -85,7 +85,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T07:40:03.466Z"
+    "_syncedAt": "2026-04-13T10:59:43.794Z"
   },
   {
     "id": "qickr-loyalty",
@@ -107,7 +107,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T07:40:03.466Z"
+    "_syncedAt": "2026-04-13T10:59:43.794Z"
   },
   {
     "id": "qickr-pos-training-simulator",
@@ -134,11 +134,11 @@
     ],
     "screenshots": [],
     "repositoryUrl": "https://github.com/Jasenvm/qickr-pos-training-simulator",
-    "subdomainUrl": "https://qickr-pos-training-simulator.qickrapps.au",
-    "liveAppUrl": "https://qickr-pos-training-simulator.qickrapps.au/demo",
+    "liveAppUrl": "https://qickr-pos-training-simulator.qickrapps.au",
     "version": "0.1.0",
     "lastUpdated": "2026-04-13",
-    "_syncedAt": "2026-04-13T07:40:03.466Z"
+    "subdomainUrl": "https://qickr-pos-training-simulator.qickrapps.au",
+    "_syncedAt": "2026-04-13T10:59:43.794Z"
   },
   {
     "id": "geocon-soil-testing",
@@ -163,7 +163,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T07:40:03.466Z"
+    "_syncedAt": "2026-04-13T10:59:43.795Z"
   },
   {
     "id": "pwr-trackntrace",
@@ -188,7 +188,7 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T07:40:03.467Z"
+    "_syncedAt": "2026-04-13T10:59:43.795Z"
   },
   {
     "id": "qickr-scan",
@@ -210,6 +210,6 @@
     "lastUpdated": "2026-03-30",
     "subdomainUrl": null,
     "liveAppUrl": null,
-    "_syncedAt": "2026-04-13T07:40:03.467Z"
+    "_syncedAt": "2026-04-13T10:59:43.795Z"
   }
 ]
