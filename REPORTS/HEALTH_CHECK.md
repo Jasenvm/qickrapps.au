@@ -1,6 +1,6 @@
 # 🏥 Portfolio Health Check
 
-> Generated: **Mon, 13 Apr 2026 09:29:56 GMT** · Duration: **319ms** · Projects: **8**
+> Generated: **Mon, 13 Apr 2026 11:02:05 GMT** · Duration: **621ms** · Projects: **8**
 
 | | Status | Count |
 |---|---|---|
@@ -13,7 +13,7 @@
 
 ### FaithWorkz
 
-- **URL:** https://faithworkz.qickrapps.au
+- **URL:** https://faith-workz.vercel.app
 - **HTTP status:** 200
 - **Manifest:** v`1.0.0` (2026-04-13)
 - **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
