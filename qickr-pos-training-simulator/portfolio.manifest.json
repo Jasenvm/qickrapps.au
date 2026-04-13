@@ -1,0 +1,25 @@
+{
+  "$schema": "../scripts/manifest.schema.json",
+  "id": "qickr-pos-training-simulator",
+  "title": "Qickr POS Training Simulator",
+  "shortDescription": "Interactive POS system training simulator — Figma-driven button layouts for real-world till practice.",
+  "description": "A POS training simulator built with Next.js 14, TypeScript, and Tailwind CSS. Driven by Figma designs to replicate real point-of-sale button layouts, enabling staff to practise till operations in a safe, interactive environment.",
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Figma"],
+  "category": "education",
+  "status": "coming-soon",
+  "subdomain": "qickr-pos-training-simulator",
+  "featured": false,
+  "order": 5,
+  "emoji": "🖥️",
+  "accentColor": "#10b981",
+  "highlights": [
+    "Figma-driven button layout system",
+    "Realistic POS till simulation",
+    "Built with Next.js 14 & TypeScript"
+  ],
+  "screenshots": [],
+  "repositoryUrl": "https://github.com/Jasenvm/qickr-pos-training-simulator",
+  "version": "0.0.0",
+  "lastUpdated": "2026-04-13"
+}
+

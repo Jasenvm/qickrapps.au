@@ -26,7 +26,7 @@ const SUB_PROJECTS = [
   'qickr-ndis',
   'jjs_clone_gnome',
   'qickr-layalty-program',
-  'qickr-pos-training',
+  'qickr-pos-training-simulator',
   'geocon-soil-testing-reporting',
   'pwr-trackntrace',
   'qickr-scan',
