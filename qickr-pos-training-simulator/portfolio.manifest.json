@@ -19,7 +19,8 @@
   ],
   "screenshots": [],
   "repositoryUrl": "https://github.com/Jasenvm/qickr-pos-training-simulator",
-  "liveAppUrl": null,
+  "subdomainUrl": "https://qickr-pos-training-simulator.qickrapps.au",
+  "liveAppUrl": "https://qickr-pos-training-simulator.qickrapps.au/demo",
   "version": "0.1.0",
   "lastUpdated": "2026-04-13"
 }
