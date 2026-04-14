@@ -172,11 +172,11 @@ cd marketing
 npx vercel deploy --prod
 
 # Re-apply the custom alias after every production deploy
-npx vercel alias set <returned-deployment-url> faith-workz-marketing.vercel.app \
+npx vercel alias set <returned-deployment-url> faithworkz-marketing.qickrapps.au \
   --scope team_GriAJJCtGClrY7QoCnKX777r
 
 # Verify
-curl -s -o /dev/null -w "%{http_code}" https://faith-workz-marketing.vercel.app
+curl -s -o /dev/null -w "%{http_code}" https://faithworkz-marketing.qickrapps.au
 # Expected: 200
 ```
 
@@ -216,7 +216,7 @@ curl -sL https://my-url.com | head -30
 
 | Project | Website (subdomainUrl) | App (liveAppUrl) |
 |---|---|---|
-| 🏠 FaithWorkz | faith-workz-marketing.vercel.app | faithworkz.qickrapps.au |
+| 🏠 FaithWorkz | faithworkz-marketing.qickrapps.au | faithworkz.qickrapps.au |
 | ♿ YEMS NDIS | qickr-ndis.qickrapps.au | yems.qickrapps.com |
 | 🖥️ POS Simulator | qickr-pos-training-simulator.qickrapps.au | qickr-pos-training-simulator.qickrapps.au |
 

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Household Assistant · Early Access</title>
+  <meta name="description" content="The AI-powered household OS. No login, no app store — scan a QR, start collaborating. Built for the households of tomorrow. Early access open now." />
+  <meta property="og:title" content="Household Assistant · Early Access" />
+  <meta property="og:description" content="The AI-powered household OS. No login, no app store — scan a QR, start collaborating." />
+  <meta property="og:url" content="https://faithworkz-marketing.qickrapps.au" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Household Assistant · Early Access" />
+  <meta name="twitter:description" content="No accounts. No downloads. Scan a QR code and your whole household is connected." />
+  <link rel="canonical" href="https://faithworkz-marketing.qickrapps.au" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #0a0a0f;
+      color: #f0f0f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 60px;
+      transition: background 0.3s, backdrop-filter 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(99,102,241,0.15);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1rem; color: #f0f0f5; text-decoration: none; }
+    .nav-logo span { font-size: 1.25rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.5rem 1.2rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
+    .btn-primary { background: #6366f1; color: #fff; }
+    .btn-primary:hover { background: #4f52d4; transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: #f0f0f5; border: 1px solid rgba(240,240,245,0.25); }
+    .btn-ghost:hover { border-color: #6366f1; color: #a78bfa; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 6rem 1.5rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 600px;
+      background: radial-gradient(ellipse at center, rgba(99,102,241,0.18) 0%, rgba(167,139,250,0.08) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; max-width: 780px; animation: fadeIn 0.8s ease both; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      border: 1px solid rgba(99,102,241,0.5); border-radius: 999px;
+      padding: 0.3rem 0.9rem; font-size: 0.8rem; font-weight: 600;
+      color: #a78bfa; margin-bottom: 1.75rem;
+      box-shadow: 0 0 16px rgba(99,102,241,0.2);
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    h1 span { color: #a78bfa; }
+    .hero p { font-size: clamp(1rem, 2.5vw, 1.2rem); color: rgba(240,240,245,0.7); max-width: 600px; margin: 0 auto 2.25rem; }
+    .hero-btns { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .hero-trust { font-size: 0.8rem; color: rgba(240,240,245,0.35); }
+
+    /* TECH STRIP */
+    .tech-strip { overflow: hidden; border-top: 1px solid #1e1e2e; border-bottom: 1px solid #1e1e2e; padding: 0.9rem 0; background: #0d0d14; }
+    .marquee-track { display: flex; gap: 3rem; width: max-content; animation: marquee 28s linear infinite; white-space: nowrap; }
+    .marquee-track span { font-size: 0.8rem; font-weight: 600; color: rgba(240,240,245,0.35); letter-spacing: 0.05em; text-transform: uppercase; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* SECTIONS */
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #6366f1; font-weight: 700; margin-bottom: 0.75rem; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.6rem; }
+    .section-sub { color: rgba(240,240,245,0.6); font-size: 1.05rem; margin-bottom: 3rem; }
+
+    /* FEATURES GRID */
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .feature-card {
+      background: #12121a; border: 1px solid #1e1e2e; border-radius: 12px;
+      padding: 1.5rem; transition: transform 0.2s, border-color 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.45); }
+    .feature-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .feature-card p { font-size: 0.875rem; color: rgba(240,240,245,0.55); }
+
+    /* HOW IT WORKS */
+    .how-bg { background: #0d0d14; }
+    .steps { display: flex; gap: 0; position: relative; }
+    .step { flex: 1; padding: 0 1.5rem; position: relative; text-align: center; }
+    .step:not(:last-child)::after {
+      content: ''; position: absolute; top: 2.2rem; right: 0; width: 1px; height: 3rem;
+      background: linear-gradient(to bottom, rgba(99,102,241,0.5), transparent);
+    }
+    .step-num { font-size: 3.5rem; font-weight: 900; color: rgba(99,102,241,0.25); line-height: 1; margin-bottom: 0.75rem; }
+    .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .step p { font-size: 0.875rem; color: rgba(240,240,245,0.55); }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(167,139,250,0.06) 100%);
+      border-top: 1px solid #1e1e2e; border-bottom: 1px solid #1e1e2e;
+      text-align: center;
+    }
+    .cta-section h2 { margin-bottom: 1rem; }
+    .cta-section p { color: rgba(240,240,245,0.65); max-width: 540px; margin: 0 auto 2rem; font-size: 1.05rem; }
+    .cta-sub { font-size: 0.78rem; color: rgba(240,240,245,0.3); margin-top: 1rem; }
+
+    /* FOOTER */
+    footer {
+      padding: 1.75rem 1.5rem; border-top: 1px solid #1e1e2e;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-left { font-size: 0.85rem; color: rgba(240,240,245,0.45); }
+    .footer-links { display: flex; gap: 1.25rem; }
+    .footer-links a { font-size: 0.85rem; color: rgba(240,240,245,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #a78bfa; }
+    .footer-right { font-size: 0.8rem; color: rgba(240,240,245,0.3); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr 1fr; }
+      .steps { flex-direction: column; gap: 2.5rem; }
+      .step:not(:last-child)::after { display: none; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .features-grid { grid-template-columns: 1fr; }
+      nav { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a class="nav-logo" href="#">
+    <span>🏠</span> Household Assistant
+  </a>
+  <a class="btn btn-primary" href="https://faith-workz.vercel.app" target="_blank" rel="noopener">Open App →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="badge">✦ Early Access Open</div>
+    <h1>Your household,<br /><span>powered by AI.</span></h1>
+    <p>No accounts. No downloads. Scan a QR code and your whole household is connected — tasks, bills, meals, health, and more. Real-time. AI-native.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="https://faith-workz.vercel.app" target="_blank" rel="noopener">Try it free →</a>
+      <a class="btn btn-ghost" href="#features">See what's inside ↓</a>
+    </div>
+    <p class="hero-trust">No credit card · No sign-up · Works on any device</p>
+  </div>
+</section>
+
+<!-- TECH STRIP -->
+<div class="tech-strip">
+  <div class="marquee-track">
+    <span>Supabase Realtime</span><span>Claude AI</span><span>QR Passwordless Auth</span><span>Progressive Web App</span><span>WebSocket Sync</span><span>Zero Backend Config</span><span>Open Early Access</span><span>20+ Modules</span>
+    <span>Supabase Realtime</span><span>Claude AI</span><span>QR Passwordless Auth</span><span>Progressive Web App</span><span>WebSocket Sync</span><span>Zero Backend Config</span><span>Open Early Access</span><span>20+ Modules</span>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-label">Features</div>
+    <h2>Everything your household needs</h2>
+    <p class="section-sub">20+ modules, one shared space.</p>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon">📋</div><h3>Tasks &amp; To-dos</h3><p>Sections, priorities, due dates, subtasks. Drag to reorder.</p></div>
+      <div class="feature-card"><div class="feature-icon">💸</div><h3>Bills &amp; Finance</h3><p>Split costs, track payments, see who owes what.</p></div>
+      <div class="feature-card"><div class="feature-icon">🛒</div><h3>Shopping &amp; Fridge</h3><p>Smart shopping lists with fridge inventory tracking.</p></div>
+      <div class="feature-card"><div class="feature-icon">🍽️</div><h3>Meals &amp; Recipes</h3><p>Meal planner with auto-generated shopping lists.</p></div>
+      <div class="feature-card"><div class="feature-icon">🤖</div><h3>AI Assistant</h3><p>Claude AI built into every page. Ask anything about your household.</p></div>
+      <div class="feature-card"><div class="feature-icon">🔔</div><h3>Reminders &amp; Health</h3><p>Medications, appointments, and push notifications.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-bg">
+  <div class="container">
+    <div class="section-label">How it works</div>
+    <h2>Live in 30 seconds</h2>
+    <p class="section-sub">Zero friction from zero to household OS.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Open the app</h3>
+        <p>Go to faith-workz.vercel.app on any browser. No install required.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Create a room</h3>
+        <p>One room per household. Name it, get a QR code instantly.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Share &amp; collaborate</h3>
+        <p>Paste the QR link in your group chat. Everyone's in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EARLY ACCESS CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Be a founding household.</h2>
+    <p>Early access is completely free. No waitlist. No credit card. The product ships weekly — your feedback shapes what gets built next.</p>
+    <a class="btn btn-primary" href="https://faith-workz.vercel.app" target="_blank" rel="noopener" style="font-size:1.05rem;padding:0.75rem 2rem;">Open the app — it's free →</a>
+    <p class="cta-sub">No waitlist · No credit card · No app store · Early access open now</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">🏠 Household Assistant · © 2026</div>
+  <div class="footer-links">
+    <a href="https://faith-workz.vercel.app" target="_blank" rel="noopener">App ↗</a>
+    <a href="https://faithworkz-marketing.qickrapps.au" target="_blank" rel="noopener">Marketing ↗</a>
+  </div>
+  <div class="footer-right">Built for early adopters.</div>
+</footer>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+</script>
+</body>
+</html>
+

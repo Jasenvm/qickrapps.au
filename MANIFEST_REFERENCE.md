@@ -81,7 +81,7 @@ shows only the "Website ↗" ghost button pointing to `subdomainUrl`.
 
 | Project | subdomainUrl (Website ↗) | liveAppUrl (App ↗) |
 |---|---|---|
-| FaithWorkz | `faith-workz-marketing.vercel.app` | `faithworkz.qickrapps.au` |
+| FaithWorkz | `faithworkz-marketing.qickrapps.au` | `faithworkz.qickrapps.au` |
 | YEMS NDIS | `qickr-ndis.qickrapps.au` | `yems.qickrapps.com` |
 | POS Simulator | `qickr-pos-training-simulator.qickrapps.au` | *(same — no separate app URL yet)* |
 
