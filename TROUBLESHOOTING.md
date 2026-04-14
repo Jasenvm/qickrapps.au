@@ -244,7 +244,7 @@ Common gotchas discovered during audit (April 2026):
 | Project | Issue found |
 |---|---|
 | FaithWorkz | `faithworkz.qickrapps.au` and `faith-workz.vercel.app` served **identical** React SPA — no separate marketing page existed yet |
-| YEMS NDIS | `yems.qickrapps.com` served a Refine.dev default scaffold; the real app is at `app.quickrndis.com.au` |
+| YEMS NDIS | `yems.qickrapps.com` served a Refine.dev default scaffold; the real app is at `yems.qickrapps.com` |
 | POS Simulator | Root `/` is the actual simulator; `/demo` is a developer component showcase — roles were reversed in the manifest |
 
 **Fix:**

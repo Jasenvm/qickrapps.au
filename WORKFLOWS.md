@@ -217,7 +217,7 @@ curl -sL https://my-url.com | head -30
 | Project | Website (subdomainUrl) | App (liveAppUrl) |
 |---|---|---|
 | 🏠 FaithWorkz | faith-workz-marketing.vercel.app | faithworkz.qickrapps.au |
-| ♿ YEMS NDIS | qickr-ndis.qickrapps.au | app.quickrndis.com.au |
+| ♿ YEMS NDIS | qickr-ndis.qickrapps.au | yems.qickrapps.com |
 | 🖥️ POS Simulator | qickr-pos-training-simulator.qickrapps.au | qickr-pos-training-simulator.qickrapps.au |
 
 ---

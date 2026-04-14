@@ -22,7 +22,7 @@
 
 ### YEMS NDIS
 
-- **URL:** https://app.quickrndis.com.au
+- **URL:** https://yems.qickrapps.com
 - **Manifest:** v`1.0.0` (2026-03-30)
 - **Note:** fetch failed
 
