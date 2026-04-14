@@ -1,37 +1,36 @@
 # 🏥 Portfolio Health Check
 
-> Generated: **Tue, 14 Apr 2026 09:36:45 GMT** · Duration: **494ms** · Projects: **8**
+> Generated: **Tue, 14 Apr 2026 11:57:59 GMT** · Duration: **627ms** · Projects: **8**
 
 | | Status | Count |
 |---|---|---|
-| 🟢 | Healthy | 1 |
+| 🟢 | Healthy | 3 |
 | 🟡 | Stale | 0 |
-| 🔴 | Offline / Error | 2 |
+| 🔴 | Offline / Error | 0 |
 | ⚪ | Placeholder | 5 |
 
 ## 🟢 Healthy
 
 ### FaithWorkz
 
-- **URL:** https://faithworkz.qickrapps.au
+- **URL:** https://faithworkz.qickrapps.au/
 - **HTTP status:** 200
 - **Manifest:** v`1.0.0` (2026-04-13)
 - **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
 
-## 🔴 Offline / Error
-
 ### YEMS NDIS
 
 - **URL:** https://yems.qickrapps.com/
-- **HTTP status:** 404
+- **HTTP status:** 200
 - **Manifest:** v`1.0.0` (2026-03-30)
-- **Note:** HTTP 404
+- **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
 
 ### Qickr POS Training Simulator
 
 - **URL:** https://qickr-pos-training-simulator.qickrapps.au
+- **HTTP status:** 200
 - **Manifest:** v`0.1.0` (2026-04-13)
-- **Note:** fetch failed
+- **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
 
 ## ⚪ Placeholder
 
