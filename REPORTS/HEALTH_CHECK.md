@@ -1,6 +1,6 @@
 # 🏥 Portfolio Health Check
 
-> Generated: **Mon, 13 Apr 2026 12:03:18 GMT** · Duration: **553ms** · Projects: **8**
+> Generated: **Tue, 14 Apr 2026 09:36:45 GMT** · Duration: **494ms** · Projects: **8**
 
 | | Status | Count |
 |---|---|---|
@@ -22,9 +22,10 @@
 
 ### YEMS NDIS
 
-- **URL:** https://yems.qickrapps.com
+- **URL:** https://yems.qickrapps.com/
+- **HTTP status:** 404
 - **Manifest:** v`1.0.0` (2026-03-30)
-- **Note:** fetch failed
+- **Note:** HTTP 404
 
 ### Qickr POS Training Simulator
 
