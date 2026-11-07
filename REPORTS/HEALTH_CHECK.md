@@ -1,12 +1,12 @@
 # 🏥 Portfolio Health Check
 
-> Generated: **Fri, 06 Nov 2026 09:07:49 GMT** · Duration: **855ms** · Projects: **8**
+> Generated: **Sat, 07 Nov 2026 08:35:21 GMT** · Duration: **763ms** · Projects: **8**
 
 | | Status | Count |
 |---|---|---|
-| 🟢 | Healthy | 2 |
+| 🟢 | Healthy | 1 |
 | 🟡 | Stale | 0 |
-| 🔴 | Offline / Error | 1 |
+| 🔴 | Offline / Error | 2 |
 | ⚪ | Placeholder | 5 |
 
 ## 🟢 Healthy
@@ -18,14 +18,14 @@
 - **Manifest:** v`1.0.0` (2026-04-13)
 - **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
 
+## 🔴 Offline / Error
+
 ### YEMS NDIS
 
 - **URL:** https://yems.qickrapps.com/
-- **HTTP status:** 200
+- **HTTP status:** 404
 - **Manifest:** v`1.0.0` (2026-03-30)
-- **Note:** Version not detectable — add /version.json or <meta name="version"> to enable
-
-## 🔴 Offline / Error
+- **Note:** HTTP 404
 
 ### Qickr POS Training Simulator
 
